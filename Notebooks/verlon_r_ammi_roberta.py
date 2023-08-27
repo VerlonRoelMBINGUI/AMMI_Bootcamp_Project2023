@@ -539,21 +539,7 @@ plt.show()
 
 """The training accuracy starts to approach 100% after 8 epochs or so. You might try to fine-tune the parameters a bit more."""
 
-# Move the tensors to CPU to avoid converting CUDA tensors to NumPy arrays
-train_loss = torch.tensor(history['train_loss']).cpu()
-val_loss = torch.tensor(history['val_loss']).cpu()
 
-# Plot the training and validation accuracy
-plt.plot(train_loss, label='train loss')
-plt.plot(val_loss, label='validation loss')
-
-plt.title('Training history')
-plt.ylabel('loss')
-plt.xlabel('Epoch')
-plt.legend()
-plt.ylim([0, 1])
-
-plt.show()
 
 import torch
 import torch.nn.functional as F
